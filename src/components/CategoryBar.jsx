@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 const CategoryBar = () => {
   return (
     <Form.Group className="mb-3">
-      <Container className="d-flex gap-2 justify-content-evenly mt-5">
+      <Container className="d-flex gap-2 justify-content-center mt-5 flex-wrap align-items-center">
         <Form.Check type="checkbox" label="All" />
         <Form.Check type="checkbox" label="Electronics" />
         <Form.Check type="checkbox" label="Jewelry" />

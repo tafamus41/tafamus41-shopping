@@ -15,4 +15,13 @@ code {
   height: 450px; 
   max-width: 350px;
   min-width: 230px;
+  /* background-color: white; */
+  .card-basket{
+    border-radius: 50%;
+    cursor:pointer;
+    &:hover{
+     background-color: aqua;
+      
+    }
+  }
 }

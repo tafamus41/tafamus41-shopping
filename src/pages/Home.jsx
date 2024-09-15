@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <Container>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center align-items-center">
         {product.map((item) => (
           <ProductCard key={item.id} {...item} />
          ))}

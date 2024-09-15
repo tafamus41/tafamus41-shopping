@@ -6,10 +6,10 @@ import CategoryBar from "../components/CategoryBar";
 
 const Home = () => {
   const [product, setProduct] = useState([]);
-  const [category,setCategory]=useState([])
+  const [category, setCategory] = useState([]);
   const url = "https://fakestoreapi.com/products";
-  const categoryUrl="https://fakestoreapi.com/products/categories"
-
+  const categoryUrl = "https://fakestoreapi.com/products/categories";
+console.log(category);
   const getProducts = async () => {
     const res = await axios.get(url);
     setProduct(res.data);
@@ -18,18 +18,17 @@ const Home = () => {
     getProducts();
   }, []);
 
-const getCategories= async ()=>{
-  const res =await axios.get(categoryUrl)
-  setCategory(res.data);
-}
-useEffect(() => {
-  getCategories();
-}, []);
-
+  const getCategories = async () => {
+    const res = await axios.get(categoryUrl);
+    setCategory(["All",...res.data]);
+  };
+  useEffect(() => {
+    getCategories();
+  }, []);
 
   return (
     <div>
-      <CategoryBar/>
+      <CategoryBar />
       <Container>
         <Row className="justify-content-center align-items-center">
           {product.map((item) => (

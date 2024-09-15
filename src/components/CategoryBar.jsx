@@ -1,15 +1,13 @@
 import { Container } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 
-const CategoryBar = () => {
+const CategoryBar = ({ category }) => {
   return (
     <Form.Group className="mb-3">
       <Container className="d-flex gap-2 justify-content-center mt-5 flex-wrap align-items-center">
-        <Form.Check type="checkbox" label="All" />
-        <Form.Check type="checkbox" label="Electronics" />
-        <Form.Check type="checkbox" label="Jewelry" />
-        <Form.Check type="checkbox" label="Men's Clothing" />
-        <Form.Check type="checkbox" label="Women's Clothing" />
+        {category.map((item, i) => (
+          <Form.Check type="checkbox" label={item} key={i} />
+        ))}
       </Container>
     </Form.Group>
   );

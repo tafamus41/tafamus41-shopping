@@ -9,7 +9,7 @@ const Home = () => {
   const [category, setCategory] = useState([]);
   const url = "https://fakestoreapi.com/products";
   const categoryUrl = "https://fakestoreapi.com/products/categories";
-console.log(category);
+
   const getProducts = async () => {
     const res = await axios.get(url);
     setProduct(res.data);
@@ -28,7 +28,7 @@ console.log(category);
 
   return (
     <div>
-      <CategoryBar />
+      <CategoryBar category={category}/>
       <Container>
         <Row className="justify-content-center align-items-center">
           {product.map((item) => (

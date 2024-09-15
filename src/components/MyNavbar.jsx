@@ -7,10 +7,10 @@ import Button from "react-bootstrap/Button";
 
 const MyNavbar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary d-flex justify-content-between align-items-center">
+    <Navbar expand="lg" className="bg-body-tertiary d-flex justify-content-between align-items-center px-5">
       
-        <Navbar.Brand>
-          <img src={logo} alt="" width={"100px"} />TAFAMUS41 SHOPPING
+        <Navbar.Brand className="d-flex align-items-center gap-4" >
+          <img src={logo} alt="" width={"75px"} /> <span>TAFAMUS41 SHOPPING</span> 
         </Navbar.Brand>
         <Button variant="primary" width={"100px"}  >
           <SlBasket /> <Badge bg="secondary"></Badge>

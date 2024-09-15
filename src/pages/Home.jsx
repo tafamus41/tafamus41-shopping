@@ -6,10 +6,9 @@ import ProductCard from "../components/ProductCard";
 const Home = () => {
   const [product, setProduct] = useState("");
   const url = "https://fakestoreapi.com/products";
-// console.log(product);
+  
   const getProducts = async () => {
     const res = await axios.get(url);
-    // console.log(res.data);
     setProduct(res.data);
   };
   useEffect(() => {

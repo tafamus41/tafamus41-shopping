@@ -5,9 +5,10 @@ import Home from "../pages/Home";
 // import CategoryBar from "../components/CategoryBar";
 
 const AppRouter = () => {
+  
   return (
     <BrowserRouter>
-      <MyNavbar />
+      <MyNavbar/>
       {/* <CategoryBar/> */}
       <Routes>
         <Route exact path="/" element={<Home/>}/>

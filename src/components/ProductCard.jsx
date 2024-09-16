@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 import { SlBasketLoaded } from "react-icons/sl";
-const ProductCard = ({ id, title, price, category, image}) => {
+const ProductCard = ({ id, title, price, category, image,basket}) => {
   return (
     <Col sm={12} md={6} lg={4}>
       <Card className="card mb-3 m-auto">
@@ -13,7 +13,7 @@ const ProductCard = ({ id, title, price, category, image}) => {
         <Card.Body className="d-flex justify-content-between">
           <Card.Text>{category}</Card.Text>
           <Card.Text>
-            <SlBasketLoaded size={30} className="card-basket"/>
+            <SlBasketLoaded size={30} className="card-basket" onClick={basket}/>
           </Card.Text>
         </Card.Body>
       </Card>

@@ -4,7 +4,7 @@ import { Container, Row } from "react-bootstrap";
 import ProductCard from "../components/ProductCard";
 import CategoryBar from "../components/CategoryBar";
 
-const Home = () => {
+const Home = ({basket}) => {
   const [product, setProduct] = useState([]);
   const [category, setCategory] = useState([]);
   
@@ -33,7 +33,7 @@ const Home = () => {
       <Container>
         <Row className="justify-content-center align-items-center">
           {product.map((item) => (
-            <ProductCard key={item.id} {...item}/>
+            <ProductCard key={item.id} {...item} basket={basket}/>
           ))}
         </Row>
       </Container>

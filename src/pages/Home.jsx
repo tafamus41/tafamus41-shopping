@@ -33,7 +33,7 @@ const Home = ({basket}) => {
       <Container>
         <Row className="justify-content-center align-items-center">
           {product.map((item) => (
-            <ProductCard key={item.id} {...item} basket={basket}/>
+            <ProductCard key={item.id} basket={basket} item={item}/>
           ))}
         </Row>
       </Container>

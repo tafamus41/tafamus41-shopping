@@ -5,7 +5,7 @@ import { SlBasket } from "react-icons/sl";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 
-const MyNavbar = ({counter}) => {
+const MyNavbar = ({counter, basketLoad}) => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary d-flex justify-content-between align-items-center px-5">
       

@@ -6,10 +6,15 @@ import Home from "../pages/Home";
 
 const AppRouter = () => {
   const [counter, setCounter] = useState(0)
-  const basket = ()=>setCounter(counter+1)
+  const [basketLoad,setBasketLoad]=useState([])
+  // console.log(basketLoad);
+  const basket = (item)=>{
+    setCounter(counter+1)
+    setBasketLoad(item)
+  }
   return (
     <BrowserRouter>
-      <MyNavbar counter={counter}/>
+      <MyNavbar counter={counter} basketLoad={basketLoad}/>
       {/* <CategoryBar/> */}
       <Routes>
         <Route exact path="/" element={<Home basket={basket}/>}/>

@@ -7,8 +7,8 @@ import CategoryBar from "../components/CategoryBar";
 const Home = ({basket}) => {
   const [product, setProduct] = useState([]);
   const [category, setCategory] = useState([]);
-  const [check, setCheck] = useState("")
-  
+  const [check, setCheck] = useState("all")
+  console.log(category);
   const url = "https://fakestoreapi.com/products";
   const categoryUrl = "https://fakestoreapi.com/products/categories";
 
@@ -22,7 +22,7 @@ const Home = ({basket}) => {
 
   const getCategories = async () => {
     const res = await axios.get(categoryUrl);
-    setCategory(["All",...res.data]);
+    setCategory(["all",...res.data]);
   };
   useEffect(() => {
     getCategories();
@@ -33,7 +33,8 @@ const Home = ({basket}) => {
       <CategoryBar category={category} setCheck={setCheck}/>
       <Container>
         <Row className="justify-content-center align-items-center">
-          {product.map((item) => (
+          {product.filter((item)=>item.category.toLowerCase()===check).
+          map((item) => (
             <ProductCard key={item.id} basket={basket} item={item}/>
           ))}
         </Row>

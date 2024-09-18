@@ -8,8 +8,7 @@ const AppRouter = () => {
   const [counter, setCounter] = useState(0);
   const [basketLoad, setBasketLoad] = useState([]);
   const [basketShow, setBasketShow] = useState(false);
-  // console.log(basketLoad);
-  // console.log(typeof basketLoad);
+ 
   const basket = (item) => {
     setCounter(counter + 1);
     setBasketLoad([...basketLoad,item]);
@@ -19,7 +18,6 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <MyNavbar counter={counter} renderBasket={renderBasket} />
-      {/* <CategoryBar/> */}
       <Routes>
         <Route
           exact
@@ -32,7 +30,6 @@ const AppRouter = () => {
             )
           }
         />
-        {/* <Route path="/" element={ }/> */}
       </Routes>
     </BrowserRouter>
   );

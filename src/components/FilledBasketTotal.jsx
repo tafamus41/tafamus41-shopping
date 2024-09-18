@@ -5,7 +5,7 @@ const FilledBasketTotal = ({ basketLoad }) => {
     // console.log(basketLoad);
   return (
     <Container>
-      <Row>
+      <Row className="justify-content-center align-items-center">
         {basketLoad.map((item, i) => (
           <Col sm={12} md={6} lg={4} key={i}>
             <Card className="card mb-3 m-auto">

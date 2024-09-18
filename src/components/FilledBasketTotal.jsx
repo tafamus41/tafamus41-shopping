@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 
 const FilledBasketTotal = ({ basketLoad }) => {
-    
+  const totalPrice = basketLoad.reduce((total, item) => total + item.price, 0); 
   return (
     <Container>
       <Row className="justify-content-center align-items-center">
@@ -26,6 +26,11 @@ const FilledBasketTotal = ({ basketLoad }) => {
             </Card>
           </Col>
         ))}
+      </Row>
+      <Row className="mt-4">
+        <Col className="text-center">
+          <h4>Total Fee: {totalPrice.toFixed(2)} $</h4>
+        </Col>
       </Row>
     </Container>
   );

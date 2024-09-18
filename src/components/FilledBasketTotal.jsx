@@ -19,10 +19,6 @@ const FilledBasketTotal = ({ basketLoad }) => {
                 <Card.Text className="w-75">{item.title}</Card.Text>
                 <Card.Text className=" w-25 text-end">{item.price} $</Card.Text>
               </Card.Body>
-              <Card.Body className="d-flex justify-content-between">
-                <Card.Text>{item.category}</Card.Text>
-                <Card.Text></Card.Text>
-              </Card.Body>
             </Card>
           </Col>
         ))}

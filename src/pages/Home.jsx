@@ -4,11 +4,12 @@ import { Container, Row } from "react-bootstrap";
 import ProductCard from "../components/ProductCard";
 import CategoryBar from "../components/CategoryBar";
 
-const Home = ({basket}) => {
+const Home = ({ basket }) => {
   const [product, setProduct] = useState([]);
   const [category, setCategory] = useState([]);
-  const [check, setCheck] = useState("all")
+  const [check, setCheck] = useState("all");
   console.log(category);
+  console.log(product);
   const url = "https://fakestoreapi.com/products";
   const categoryUrl = "https://fakestoreapi.com/products/categories";
 
@@ -22,7 +23,7 @@ const Home = ({basket}) => {
 
   const getCategories = async () => {
     const res = await axios.get(categoryUrl);
-    setCategory(["all",...res.data]);
+    setCategory(["all", ...res.data]);
   };
   useEffect(() => {
     getCategories();
@@ -30,13 +31,14 @@ const Home = ({basket}) => {
 
   return (
     <div>
-      <CategoryBar category={category} setCheck={setCheck}/>
+      <CategoryBar category={category} setCheck={setCheck} />
       <Container>
         <Row className="justify-content-center align-items-center">
-          {product.filter((item)=>item.category.toLowerCase()===check).
-          map((item) => (
-            <ProductCard key={item.id} basket={basket} item={item}/>
-          ))}
+          {product
+            .filter((item) =>check === "all"|| item.category === check)
+            .map((item) => (
+              <ProductCard key={item.id} basket={basket} item={item} />
+            ))}
         </Row>
       </Container>
     </div>

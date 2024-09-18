@@ -7,7 +7,7 @@ const EmptyBasketTotal = () => {
     <div className="d-flex justify-content-center align-items-center flex-column mt-5">
       <h1 className="text-success">Your basket is already empty</h1>
       <h1 className="text-danger">Do you wanna go back and choose something</h1>
-      <button onClick={()=>navigate("/")}>GO BACK</button>
+      <button onClick={()=>navigate(-1)}>GO BACK</button>
     </div>
   );
 };

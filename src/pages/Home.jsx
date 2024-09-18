@@ -8,8 +8,7 @@ const Home = ({ basket }) => {
   const [product, setProduct] = useState([]);
   const [category, setCategory] = useState([]);
   const [check, setCheck] = useState("all");
-  console.log(category);
-  console.log(product);
+ 
   const url = "https://fakestoreapi.com/products";
   const categoryUrl = "https://fakestoreapi.com/products/categories";
 

@@ -1,8 +1,6 @@
 import React from "react";
 
-
 const EmptyBasketTotal = () => {
- 
   return (
     <div className="d-flex justify-content-center align-items-center flex-column mt-5">
       <h1 className="text-success">Your basket is already empty</h1>

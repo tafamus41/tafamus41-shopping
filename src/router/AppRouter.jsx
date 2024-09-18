@@ -26,7 +26,7 @@ const AppRouter = () => {
           path="/"
           element={
             basketShow ? (
-              <BasketCard basketLoad={basketLoad} />
+              <BasketCard basketLoad={basketLoad} counter={counter}/>
             ) : (
               <Home basket={basket} />
             )

@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 
 const FilledBasketTotal = ({ basketLoad }) => {
-    // console.log(basketLoad);
+    
   return (
     <Container>
       <Row className="justify-content-center align-items-center">

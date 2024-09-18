@@ -1,10 +1,10 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Container } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 
-const CategoryBar = ({ category }) => {
-const [check, setCheck] = useState("")
-console.log(check);
+const CategoryBar = ({ category,setCheck }) => {
+
+// console.log(check);
   return (
     <Form.Group className="mb-3">
       <Container className="d-flex gap-2 justify-content-center mt-5 flex-wrap align-items-center">

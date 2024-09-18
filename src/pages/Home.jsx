@@ -7,6 +7,7 @@ import CategoryBar from "../components/CategoryBar";
 const Home = ({basket}) => {
   const [product, setProduct] = useState([]);
   const [category, setCategory] = useState([]);
+  const [check, setCheck] = useState("")
   
   const url = "https://fakestoreapi.com/products";
   const categoryUrl = "https://fakestoreapi.com/products/categories";
@@ -29,7 +30,7 @@ const Home = ({basket}) => {
 
   return (
     <div>
-      <CategoryBar category={category}/>
+      <CategoryBar category={category} setCheck={setCheck}/>
       <Container>
         <Row className="justify-content-center align-items-center">
           {product.map((item) => (
